@@ -1,4 +1,9 @@
+# Stack-work folder/files
 .stack-work/
 *~
 
+# VS Code files.
 .vscode/
+
+# DS Store files
+**/.DS_Store 

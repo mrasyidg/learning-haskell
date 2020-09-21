@@ -27,6 +27,7 @@ library
   exposed-modules:
       Lib
       Phoityne.Example.Math
+      Tugas1.Tugas1
   other-modules:
       Paths_learning_haskell
   hs-source-dirs:
