@@ -28,6 +28,7 @@ library
       Lib
       Phoityne.Example.Math
       Tutorials.Tutorial1
+      Tutorials.Tutorial2
   other-modules:
       Paths_learning_haskell
   hs-source-dirs:
