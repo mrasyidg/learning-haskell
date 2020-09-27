@@ -1,45 +1,41 @@
--- Tugas1-1606875781-MuhammadRasyidGatraWijaya.hs
+-- Tugas2-1606875781-MuhammadRasyidGatraWijaya.hs
 -- Muhammad Rasyid Gatra Wijaya - 1606875781 - Functional Programming MOOC
 
-module Tutorials.Tutorial1(
-    square
-,   circleArea
-,   isTriangle
-,   listSum
-,   listSumArea
-,   reverseList
-,   quicksort1
+module Tugas.Tugas2(
+    sumOfSquares
+,   triangular
+,   power
+,   isPalindrome
 ) where
 
--- 1. circleArea r
-square :: Num a => a -> a
-square x = x * x 
+import Data.Char ( isAlpha, toLower )
+import Data.List ()
 
-circleArea :: Floating a => a -> a
-circleArea r = 3.14 * square r 
+-- 1. sumOfSquares [Nums]
+sumOfSquares :: Num a => [a] -> a
+sumOfSquares lst = sum $ map (^2) lst
 
--- 2. isTriangle a b c
-isTriangle :: (Ord a, Num a) => a -> a -> a -> Bool
-isTriangle a b c = a + b >= c && a + c >= b && b + c >= a 
+-- 2. triangular x
+triangular :: Integral a => a -> a
+triangular x = x * (x + 1) `div` 2
 
--- 3. listSum [Int]
-listSum :: [Int] -> Int
-listSum [] = 0
-listSum (x : xs) = x + listSum xs
+-- 3. power x n
+power:: Integer->Integer->Integer
+power x n   | (n==1) = x
+            | x < 0 || n < 0 = error "Error: inputs should only be positive integers."
+            | even n = (power x ( div n 2))*(power x ( div n 2)) 
+            | odd n  = x * (power x (n-1))
 
--- 4. listSumArea [Double]
-listSumArea :: [Double] -> Double
-listSumArea [] = 0
-listSumArea (x : xs) = x + listSumArea xs
+-- 4. isPalindrome str
+isPalindrome :: String -> Bool
+isPalindrome str = s1 == reverse(s1)
+            where s1 = stringLowerLetters str
 
--- 5. reverseList [a]
-reverseList :: [a] -> [a]
-reverseList [] = []
-reverseList (x:xs) = reverseList xs ++ [x]
+stringToLower :: String -> String
+stringToLower str = map toLower str
 
--- 6. Descending quicksort [Int]
-quicksort1 :: Ord a => [a] -> [a]
-quicksort1 [] = []
-quicksort1 (x:xs) = quicksort1 small ++ (x : quicksort1 large)
-  where small = [y | y <- xs, y >= x]
-        large = [y | y <- xs, y < x]
+stringletters :: String -> String
+stringletters str = filter isAlpha str
+
+stringLowerLetters :: String -> String
+stringLowerLetters = stringToLower.stringletters
