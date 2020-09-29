@@ -28,6 +28,7 @@ library
       Lib
       Phoityne.Example.Math
       Tugas1.Tugas1
+      Tugas2.Tugas2
   other-modules:
       Paths_learning_haskell
   hs-source-dirs:
