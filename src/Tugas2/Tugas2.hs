@@ -1,7 +1,7 @@
 -- Tugas2-1606875781-MuhammadRasyidGatraWijaya.hs
 -- Muhammad Rasyid Gatra Wijaya - 1606875781 - Functional Programming MOOC
 
-module Tugas.Tugas2(
+module Tugas2.Tugas2(
     sumOfSquares
 ,   triangular
 ,   power
