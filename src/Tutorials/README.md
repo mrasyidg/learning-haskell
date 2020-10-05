@@ -13,6 +13,6 @@ first, and then:
 ~$ stack ghci
 `
 <br><br>
-To run Tutorial1 and Tutorial2 functions, input commands with function names along with their correct parameters (inputs).
-There is only two tutorials available currently.
+To run all the functions in all the tutorials, input commands with function names along with their correct parameters (inputs).
+There are only three tutorials available currently.
 ***
