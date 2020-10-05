@@ -5,6 +5,7 @@ module Tutorials.Tutorial3(
 ,   fibonacci
 ,   powerWithAdd
 ,   sumEven
+,   invest
 ) where
 
 -- 1. myCurry to myUncarry (uncurrying)
@@ -34,3 +35,14 @@ powerWithAdd x n  = let y = powerWithAdd x (n-1)
 -- 4. sumEven [Int]
 sumEven :: [Integer] -> Integer
 sumEven = sum . filter even
+
+-- 5. invest capital, interest rate, months
+monthly :: Double -> Double -> Double
+monthly a b = (a*(1 + b/100)) 
+
+loop :: Double -> Double -> Double -> Double
+loop a b 0 = a
+loop a b c = monthly (loop a b (c-1)) b+a
+
+invest :: Double -> Double -> Double -> Double
+invest a b c = loop a b c - a
