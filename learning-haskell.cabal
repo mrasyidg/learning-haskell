@@ -30,6 +30,7 @@ library
       Tugas1.Tugas1
       Tugas2.Tugas2
       Tugas3.Tugas3
+      Tugas4.Tugas4
   other-modules:
       Paths_learning_haskell
   hs-source-dirs:

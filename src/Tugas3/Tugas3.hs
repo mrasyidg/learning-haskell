@@ -11,7 +11,7 @@ module Tugas3.Tugas3(
 ,   invest
 ) where
 
--- 1. myCurry to myUncarry (uncurrying)
+-- 1. myCurry to myUncurry (uncurrying)
 myCurry :: ((a, b) -> c) -> a -> b -> c
 myCurry f = \x y -> f (x, y)
 myUncurry :: (a -> b -> c) -> ((a, b) -> c)
