@@ -45,17 +45,17 @@ reverse' = foldr (\x acc -> acc ++[x])[]
 listComp :: [Integer]
 listComp = [ x+y | x<-[1..4], y<-[2..4], x > y ]
 
--- 8 phytaTriple [(Int, Int, Int)]
+-- 8. phytaTriple [(Int, Int, Int)]
 pythaTriple :: [(Int, Int, Int)]
 pythaTriple = [(x,y,z) | z <- [1..], y <- [1..z], x <- [1..y], x*x + y*y == z*z]
 
--- 9 Sieve of Eratosthenes
+-- 9. Sieve of Eratosthenes
 primes :: [Integer]
 primes =  sieve [2..]
           where
           sieve (p:xs) = p : sieve [x | x <- xs, rem x p > 0]
 
--- 10 noUpperIndent str
+-- 10. noUpperIndent str
 alpha :: [Char]
 alpha = ['a'..'z']
 noUpperIndent :: String -> [Char]
