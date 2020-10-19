@@ -30,6 +30,7 @@ library
       Tutorials.Tutorial1
       Tutorials.Tutorial2
       Tutorials.Tutorial3
+      Tutorials.Tutorial4
   other-modules:
       Paths_learning_haskell
   hs-source-dirs:
